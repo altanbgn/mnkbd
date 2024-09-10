@@ -1,7 +1,7 @@
-use std::collections::HashMap;
-use std::char;
-
 use clap::Parser;
+
+mod dictionary;
+mod commands;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -10,29 +10,11 @@ struct Args {
     value: String,
 }
 
-// АБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФХЦЧШЩЫЬЭЮЯ
-// абвгдеёжзийклмноөпрстуүфхцчшщыьэюя
-const TRANSFER_DICTIONARY: HashMap<char, char> = HashMap::from([
-    (char::from('A'), char::from('А')),
-    // ("А", "А"),
-    // ("А", "А"),
-    // ("А", "А"),
-    // ("А", "А"),
-    // ("А", "А"),
-    // ("А", "А"),
-]);
-
 fn main() {
     let args = Args::parse();
 
-    println!("{:?}", args);
+    println!("{}", commands::translate::en_to_mn(args.value.as_str()));
+
+    std::process::exit(0);
 }
 
-fn translate(value: &str) {
-    let new_value: String = String::from("");
-
-    value.chars().into_iter().for_each(|character| {
-        character.
-    })
-
-}
