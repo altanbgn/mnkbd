@@ -38,7 +38,7 @@ pub static TRANSFER_DICTIONARY: phf::Map<&'static str, &'static str> = phf_map! 
     "v" => "в",
     "w" => "",
     "x" => "",
-    "y" => "",
+    "y" => "ы",
     "z" => "з",
 
     // Uppercase
@@ -76,7 +76,7 @@ pub static TRANSFER_DICTIONARY: phf::Map<&'static str, &'static str> = phf_map! 
     "V" => "В",
     "W" => "",
     "X" => "",
-    "Y" => "",
+    "Y" => "Ы",
     "Z" => "З",
 
     // Symbols
